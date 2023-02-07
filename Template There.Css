@@ -1,0 +1,302 @@
+* {
+    box-sizing: border-box;
+    text-transform: capitalize;
+    margin: 0;
+}
+
+body {
+    background-color: rgb(0 0 0 / 75%);
+}
+
+:root {
+    --main-black-color: #0000008f;
+    --main-orange-color: deepskyblue;
+}
+
+html  {
+    scroll-behavior: smooth;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 768px) {
+.container {
+    width: 750px;
+}
+}
+
+@media (min-width: 992px) {
+.container {
+width: 950px;
+}
+}
+
+@media (min-width: 1200px) {
+.container {
+width: 1170px;
+}
+}
+
+header {
+    background-color: var(--main-black-color);
+    padding: 20px;
+    border-bottom-left-radius: 80px;
+    border-bottom-right-radius: 80px;
+    box-shadow: 0px 2px 12px 1px var(--main-orange-color);
+}
+
+header .content {
+    display: flex;
+}
+
+header .content h3 {
+    color: var(--main-orange-color);
+    padding: 9px;
+}
+
+header .logo {
+    border-radius: 50%;
+    margin-left: 15px;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+header .container nav {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+}
+
+
+@media (min-width: 768px) {
+    header .container nav  .menu {
+        display: none;
+    }
+}
+
+
+header .container nav .menu {
+    color: white;
+    font-size: 25px;
+    margin-right: 25px;
+    margin-top: 5px;
+}
+
+header .container nav .menu:hover + ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 12%;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    padding-top: 20px;
+    z-index: 2;
+}
+
+header .container nav ul {
+    display: flex;
+    list-style: none;
+    padding-top: 9px;
+}
+
+@media (max-width: 767px) {
+    header .container nav ul{
+        display: none;
+        padding: 0;
+    }
+    header .container nav ul a:hover {
+        display: none
+    }
+    header .container nav ul a {
+        margin: -28px;
+    }
+    header .container nav ul li {
+        margin-bottom: 50px;
+    }
+    }
+
+
+header .container nav ul a {
+    text-decoration: none;
+    color: white;
+    transition: 0.2s;
+    padding-left: 40px;
+}
+
+header .container nav ul a.active,
+header .container nav ul a:hover {
+    background-color: var(--main-orange-color);
+    padding: 10px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin: 10px;
+}
+
+.section {
+    padding-top: 120px;
+}
+
+.section .container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .section .container {
+        display: block;
+    }
+    .section .container .total-text {
+        margin-bottom: 35%;
+        margin-left: 20px;
+    }
+    .section .container .content {
+        margin-left: 14px;
+        margin-bottom: 40px;
+    }
+}
+
+.section .container .total-text {
+    max-width: 450px;
+    margin-top: 6%;
+}
+
+.section .container .total-text .h {
+    line-height: 1.3;
+    margin-bottom: 10px;
+}
+
+.section .container .total-text h3 {
+    color: white;
+    font-size: 22px;
+}
+
+.section .container .total-text h1 {
+    color: var(--main-orange-color);
+}
+
+.section .container .total-text h5 {
+    color: white;
+    font-size: 15px;
+}
+
+.section .container .total-text p {
+    color: #ffffffc4;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.section .container .total-text .link {
+    position: relative;
+}
+
+.section .container .total-text a {
+    text-decoration: none;
+    color: white;
+    background-color: var(--main-orange-color);
+    position: absolute;
+    top: 70%;
+    padding: 10px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    font-size: 15px;
+}
+
+.section .container .content {
+    width: 300px;
+    text-align: center;
+    background-color: #000000b0;
+    height: 350px;
+    padding: 30px;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    box-shadow: 3px 3px 10px 3px var(--main-orange-color);
+}
+
+.section .container .content form .text1 {
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 20px 8px;
+    padding: 4px;
+}
+
+.section .container .content form .email input{
+    width: 230px;
+    padding: 5px;
+    margin-bottom: 13px;
+    background-color: #a9a9a94d;
+    border: none;
+    border-radius: 4px;
+    color: white;
+}
+
+.section .container .content form .pass input{
+    width: 230px;
+    padding: 5px;
+    margin-bottom: 23px;
+    background-color: #a9a9a94d;
+    border: none;
+    border-radius: 4px;
+    color: white;
+}
+.section .container .content form .email input:focus,
+.section .container .content form .pass input:focus {
+    border: 1px solid var(--main-orange-color);
+    outline: none;
+    box-shadow: 0px 0 3px 1px var(--main-orange-color);
+}
+
+.section .container .content form .login input{
+    color: white;
+    background-color: var(--main-orange-color);
+    border: none;
+    padding: 7px;
+    width: 150px;
+    border-radius: 20px 5px;
+    cursor: pointer;
+}
+
+.section .container .content form .login input:focus {
+    border: 1px solid var(--main-orange-color);
+    outline: none;
+}
+
+.section .container .content form .text2  {
+    margin-top: 16px;
+}
+.section .container .content form .text3  {
+    margin: 10px 0;
+}
+
+.section .container .content form .text4  {
+    margin-bottom: 20px;
+}
+
+.container .text2 a,
+.container .text4 a {
+    text-decoration: none;
+    color: white;
+}
+
+.container .text3 a {
+    text-decoration: none;
+    color: var(--main-orange-color);
+    }
+
+.section .container .content form .icons i {
+    color: var(--main-orange-color);
+    margin-right: 8px;
+    font-size: 20px;
+}
